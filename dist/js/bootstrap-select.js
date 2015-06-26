@@ -906,7 +906,7 @@
     keydownLifeTime: function () {
       clearTimeout(this.keydownClearTimeout);
 
-      this.keydownClearTimeout = setTimeout(_.bind(this.keydownClear, this), 1000);
+      this.keydownClearTimeout = setTimeout(this.keydownClear.bind(this), 1000);
     },
 
     keydownClear: function () {
